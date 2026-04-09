@@ -10,10 +10,17 @@ export default function About() {
     <section className="section section--subtle" id="about" aria-labelledby="about-heading">
       <div className="container">
         <div className={styles.layout}>
-          {/* Avatar */}
-          <div className={styles.avatar} aria-hidden="true">
+          {/* Founder photo — add your photo as public/founder.jpg (or .png / .webp)
+               and update the src below to match the filename. */}
+          <div className={styles.avatar}>
             <div className={styles.avatarInner}>
-              <div className={styles.avatarCircle}>AI</div>
+              <img
+                src="/founder.jpg"
+                alt="Abdelkrim Ibrahim — Founder &amp; CEO of Wide View Solutions Ltd"
+                className={styles.avatarPhoto}
+                onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling.style.display = 'flex'; }}
+              />
+              <div className={styles.avatarCircle} style={{ display: 'none' }}>AI</div>
               <span className={styles.avatarBadge}>Founder &amp; CEO</span>
             </div>
           </div>
