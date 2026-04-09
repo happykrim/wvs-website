@@ -10,13 +10,17 @@ export default function About() {
     <section className="section section--subtle" id="about" aria-labelledby="about-heading">
       <div className="container">
         <div className={styles.layout}>
-          {/* Avatar */}
-          <div className={styles.avatar} aria-hidden="true">
-            <div className={styles.avatarInner}>
-              <div className={styles.avatarCircle}>AI</div>
-              <span className={styles.avatarBadge}>Founder &amp; CEO</span>
-            </div>
+        {/* Avatar - change this part */}
+        <div className={styles.avatar} aria-hidden="true">
+          <div className={styles.avatarInner}>
+            <img 
+              className={styles.avatarCircle} 
+              src="/founder.png" 
+              alt="Abdelkrim Ibrahim"
+            />
+            <span className={styles.avatarBadge}>Founder &amp; CEO</span>
           </div>
+        </div>
 
           {/* Content */}
           <div className={styles.content}>

@@ -105,9 +105,10 @@
   position: relative;
 }
 
-.hero__mark svg {
-  width: 52%;
-  height: 52%;
+.hero__mark svg,
+.hero__mark img {
+  width: 65%;
+  height: 65%;
 }
 
 /* Decorative ring */
