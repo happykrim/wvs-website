@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Eye / wide-view circle mark -->
+  <circle cx="24" cy="24" r="22" fill="#f0f7f2" stroke="#2d6a4f" stroke-width="2"/>
+  <!-- Outer iris arc -->
+  <path d="M8 24 Q24 8 40 24 Q24 40 8 24Z" fill="#2d6a4f" opacity="0.15"/>
+  <!-- Inner iris -->
+  <circle cx="24" cy="24" r="9" fill="#2d6a4f"/>
+  <!-- Pupil highlight -->
+  <circle cx="24" cy="24" r="4" fill="#f0f7f2"/>
+  <!-- Small highlight dot -->
+  <circle cx="27" cy="21" r="1.5" fill="white" opacity="0.8"/>
+</svg>

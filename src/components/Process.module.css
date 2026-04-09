@@ -1,0 +1,82 @@
+/* Process / How We Work */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.header .section-subtitle {
+  margin-inline: auto;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Connecting line on desktop */
+@media (min-width: 1024px) {
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(12.5% + 14px);
+    right: calc(12.5% + 14px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--green-100), var(--green-400), var(--green-100));
+    z-index: 0;
+  }
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border: 2px solid var(--green-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stepTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: var(--space-3);
+}
+
+.stepBody {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 220px;
+  margin-inline: auto;
+}
