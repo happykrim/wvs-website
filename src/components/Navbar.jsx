@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
@@ -48,17 +49,20 @@ export default function Navbar() {
           </span>
         </a>
 
-        <button
-          className={`${styles.navbar__toggle} ${open ? styles.open : ''}`}
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="nav-links"
-          aria-label="Toggle navigation menu"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </button>
+        <div className={styles.navbar__actions}>
+          <ThemeToggle />
+          <button
+            className={`${styles.navbar__toggle} ${open ? styles.open : ''}`}
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="nav-links"
+            aria-label="Toggle navigation menu"
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
+        </div>
 
         <ul className={`${styles.navbar__links} ${open ? styles.open : ''}`} id="nav-links" role="list">
           {NAV_LINKS.map(({ label, href }) => (
