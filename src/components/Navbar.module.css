@@ -56,21 +56,25 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 
-/* Actions (theme toggle + hamburger) */
-.navbar__actions {
+/* Theme toggle in navbar */
+.navbar__themeToggle {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  order: 3;
 }
 
-@media (min-width: 769px) {
+/* Actions (hamburger only now) */
+.navbar__actions {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .navbar__actions {
-    order: unset;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
   }
 }
 
@@ -158,6 +162,12 @@
     font-size: var(--font-size-base);
     border-bottom: 1px solid var(--color-border);
     color: var(--color-text);
+  }
+
+  .navbar__themeToggle {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--color-border);
+    width: 100%;
   }
 
   .navbar__cta {

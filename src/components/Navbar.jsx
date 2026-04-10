@@ -50,7 +50,6 @@ export default function Navbar() {
         </a>
 
         <div className={styles.navbar__actions}>
-          <ThemeToggle />
           <button
             className={`${styles.navbar__toggle} ${open ? styles.open : ''}`}
             onClick={() => setOpen((v) => !v)}
@@ -72,6 +71,9 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li className={styles.navbar__themeToggle}>
+            <ThemeToggle />
+          </li>
           <li>
             <a href="#contact" className={`btn btn--primary ${styles.navbar__cta}`} onClick={close}>
               Book a Call

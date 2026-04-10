@@ -3,11 +3,10 @@ import styles from './ThemeToggle.module.css'
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
+    // Check localStorage first, default to light mode
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('theme')
       if (stored) return stored
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
     return 'light'
   })
@@ -16,20 +15,6 @@ export default function ThemeToggle() {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
-
-  // Listen to system preference changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (e) => {
-      const stored = localStorage.getItem('theme')
-      // Only auto-switch if user hasn't manually set a preference
-      if (!stored) {
-        setTheme(e.matches ? 'dark' : 'light')
-      }
-    }
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange)
-  }, [])
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))

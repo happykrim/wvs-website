@@ -7,10 +7,9 @@
     <meta name="description" content="Wide View Solutions Ltd — Automation, Data Engineering, Software Development, and Growth Systems for businesses." />
     <title>Wide View Solutions Ltd</title>
     <script>
-      // Prevent flash of wrong theme
+      // Prevent flash of wrong theme - default to light
       (function() {
-        const theme = localStorage.getItem('theme') || 
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
