@@ -49,19 +49,17 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className={styles.navbar__actions}>
-          <button
-            className={`${styles.navbar__toggle} ${open ? styles.open : ''}`}
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="nav-links"
-            aria-label="Toggle navigation menu"
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </button>
-        </div>
+        <button
+          className={`${styles.navbar__toggle} ${open ? styles.open : ''}`}
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="nav-links"
+          aria-label="Toggle navigation menu"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
 
         <ul className={`${styles.navbar__links} ${open ? styles.open : ''}`} id="nav-links" role="list">
           {NAV_LINKS.map(({ label, href }) => (
@@ -71,7 +69,7 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li className={styles.navbar__themeToggle}>
+          <li>
             <ThemeToggle />
           </li>
           <li>

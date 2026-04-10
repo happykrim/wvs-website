@@ -37,24 +37,6 @@
 
   /* Color scheme for browser UI */
   color-scheme: light dark;
-}
-
-/* ---- Dark mode ---- */
-[data-theme="dark"] {
-  --color-bg:        #0f1419;
-  --color-bg-subtle: #1a2028;
-  --color-bg-alt:    #151b22;
-  --color-text:      #e7e9ea;
-  --color-text-muted: #8b98a5;
-  --color-heading:   #f7f9f9;
-  --color-border:    #2f3336;
-  --color-primary:   var(--green-400);
-  --color-primary-hover: var(--green-100);
-  --color-primary-light: rgba(116, 198, 157, 0.12);
-  --navbar-bg: rgba(15, 20, 25, 0.95);
-  --green-50: #1a2820;
-  --green-100: #243830;
-}
 
   /* Typography */
   --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -95,6 +77,23 @@
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
   --shadow-lg: 0 12px 32px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ---- Dark mode ---- */
+[data-theme="dark"] {
+  --color-bg:        #0f1419;
+  --color-bg-subtle: #1a2028;
+  --color-bg-alt:    #151b22;
+  --color-text:      #e7e9ea;
+  --color-text-muted: #8b98a5;
+  --color-heading:   #f7f9f9;
+  --color-border:    #2f3336;
+  --color-primary:   var(--green-400);
+  --color-primary-hover: var(--green-100);
+  --color-primary-light: rgba(116, 198, 157, 0.12);
+  --navbar-bg: rgba(15, 20, 25, 0.95);
+  --green-50: #1a2820;
+  --green-100: #243830;
 }
 
 /* ---- Reset ---- */
