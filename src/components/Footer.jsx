@@ -65,6 +65,11 @@ export default function Footer() {
           <p className={styles.copy}>
             &copy; {currentYear} Wide View Solutions Ltd. All rights reserved.
           </p>
+          <address className={styles.legal}>
+            <span>Company No. 15096592</span>
+            <span className={styles.separator} aria-hidden="true">|</span>
+            <span>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</span>
+          </address>
         </div>
       </div>
     </footer>

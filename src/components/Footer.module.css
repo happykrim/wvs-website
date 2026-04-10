@@ -128,13 +128,34 @@
 /* Bottom */
 .bottom {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .copy {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
+}
+
+.legal {
+  font-style: normal;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.separator {
+  opacity: 0.4;
+  margin-inline: var(--space-1);
 }
